@@ -26,16 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       lotSizeToApplyElement.textContent =
         calculatedLotSizeToApply * lotSizeValue;
+
+      const totalLots = Math.ceil(calculatedLotSizeToApply);
+      totalLotsElement.textContent = totalLots;
     } else {
       lotSizeToApplyElement.textContent = "";
+      totalLotsElement.textContent = "";
     }
-
-    const totalLots =
-      lotSizeValue && pricePerStockValue && amountToApplyValue
-        ? (calculatedLotSizeToApply / lotSizeValue).toFixed(2)
-        : "";
-
-    totalLotsElement.textContent = totalLots;
   }
 
   function handleButtonClick(clickedAmount) {
@@ -47,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
   pricePerStockInput.addEventListener("input", calculateLotSizeToApply);
   amountToApplyInput.addEventListener("input", calculateLotSizeToApply);
 
-  document.getElementById("button2").addEventListener("click", function () {
+  button2.addEventListener("click", function () {
     handleButtonClick(2);
   });
 
-  document.getElementById("button10").addEventListener("click", function () {
+  button10.addEventListener("click", function () {
     handleButtonClick(10);
   });
 });
