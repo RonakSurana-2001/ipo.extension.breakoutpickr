@@ -1,44 +1,45 @@
-body{
-	font-family: Courier;
-	color: white;
-	background-color: black; 
-}
-table
-{
-font-size: 20pt;
-width: 300px;
-text-align: center;
-padding: 20px;
-border-collapse: collapse;
-table-layout: fixed;
-margin: auto;
-/*no select*/
--webkit-touch-callout: none;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-}
-td
-{
-background-color: #444; 
-height: 60px;
-width: 60px;
-}
-#calc_display{
-	color: #0f0;
-	width: 290px;
-	height: 60px;
-	background-color: #333;
-	margin: 10px;
-	font-size: 16pt;
-	padding: 2px;
-	text-align: right;
-}
-td:hover{
-	background-color: #666;  
-}
-td:active{
-	background-color: #222;  
-}
+.container {
+	width: 300px;
+	margin: auto;
+	padding: 20px;
+	background-color: #f5f5f5;
+	border-radius: 80px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+	display: block;
+	margin: 15px 0;
+  }
+  
+  input {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 14px;
+  }
+  
+  p {
+	margin-top: 20px;
+	font-size: 16px;
+	color: #333;
+  }
+  
+  strong {
+	color: #009688;
+  }
+  
+  .button-container {
+	margin-top: 15px;
+  }
+  
+  .custom-button {
+	padding: 8px 12px;
+	margin-right: 10px;
+	font-size: 14px;
+	cursor: pointer;
+  }
+  
