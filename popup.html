@@ -9,15 +9,22 @@
 <body>
 	<div class="container">
 		<h2>IPO Shares to Apply Calculator</h2>
-		<label>
+		<label id="lotsize" class="lotIPOToggle">
 		  Lot Size:
 		  <input type="number" id="lotSize" />
 		</label>
-		<br />
-		<label>
+		<label id="ipoprice">
 		  IPO Price:
 		  <input type="number" id="pricePerStock" />
 		</label>
+		<div class="toggle-area">
+			<div>
+				<button class="toggle-btn" id="toggleButton">
+				  <div class="thumb"></div>
+				</button>
+			</div>
+			<div id="toggle-area-text"></div>
+		  </div>
 		<br />
 		<label>
 		  Amount (in lakhs):

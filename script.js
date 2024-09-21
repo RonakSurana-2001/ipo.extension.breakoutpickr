@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const lotSizeToApplyElement = document.getElementById("lotSizeToApply");
   const totalLotsElement = document.getElementById("totalLots");
 
+  let lotsize = document.getElementById("lotsize");
+  let ipoprice = document.getElementById("ipoprice");
+  const toggleText = document.getElementById('toggle-area-text');
+
   function calculateLotSizeToApply() {
     const lotSizeValue = parseFloat(lotSizeInput.value);
     const pricePerStockValue = parseFloat(pricePerStockInput.value);
@@ -51,4 +55,38 @@ document.addEventListener("DOMContentLoaded", function () {
   button10.addEventListener("click", function () {
     handleButtonClick(10);
   });
+
+  function toggleSwitch(){
+    if (lotsize.style.display === "block") {
+        lotsize.style.display = "none";
+        ipoprice.style.display = "block";
+        toggleText.innerText = "Switch to Lot Price";
+    } else {
+        lotsize.style.display = "block";
+        ipoprice.style.display = "none";
+        toggleText.innerText = "Switch to IPO Price";
+    }
+  }
+
+  window.addEventListener('load',()=>{
+    lotsize.style.display = "block";
+    ipoprice.style.display = "none";
+    toggleText.innerText = "Switch to IPO Price";
+  })
+
+  document.getElementById('toggleButton').addEventListener('click', function() {
+    const toggleBtn = this;
+    
+    toggleBtn.classList.toggle('toggled');
+  
+    if (toggleBtn.classList.contains('toggled')) {
+      toggleText.innerText = "Switch to IPO Price";
+      toggleSwitch()
+    } else {
+      toggleText.innerText = "Switch to Lot Size";
+      toggleSwitch()
+    }
+  });  
+
+
 });
